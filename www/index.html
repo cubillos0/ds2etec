@@ -9,14 +9,67 @@
         
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="css/bootstrap.css">
-        <title>Hello World</title>
+        <title>Consulta CEP</title>
     </head>
     <body>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <br><br>
+          
         <div class="row">
             <div class="col-sm-12">
                 <label>CEP</label>
                 <input type="text" id="cep"/>
             </div>
+            
+            <div class="row">
+                <label>Endereço</label>
+                <input type="text" id="logradouro" readonly>
+            </div>
+            
+            <div class="row">
+                <label>Bairro</label>
+                <input type="text" id="bairro" readonly>
+            </div>
+            
+            <div class="row">
+                <label>Complemento</label>
+                <input type="text" id="complemento" readonly>
+            </div>
+            
+            <div class="row">
+                <label>Cidade</label>
+                <input type="text" id="localidade" readonly>
+            </div>
+            
+            
+            <div class="row">
+                <label>UF</label>
+                <input type="text" id="uf" readonly>
+            </div>
+            
 
             <div class="row">
                 <div class="col-sm-12">
