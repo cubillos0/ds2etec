@@ -10,7 +10,7 @@ function consultaCep(){ //criando função para consultar API
         let campoEndereco = document.querySelector("#logradouro")
         let campoLocalidade = document.querySelector("#localidade")
         let campoComplemento = document.querySelector("#complemento")
-        let campoBairro = document.querySelector("#bairro")
+        let campoBairro = document.querySelector("#bairroo")
         let campoUF = document.querySelector("#uf")
 
         // vinculando as variáveis criadas anteriormente com os campos da API
@@ -26,5 +26,5 @@ function consultaCep(){ //criando função para consultar API
     }
 }
 
-let botao = document.querySelector("#botao") // cria a váriavel em JS usando como base o ID "botão" no HTML
-botao.addEventListener("click", consultaCep) // aguarda o acionamento do botão para poder executar a função criada acima
+let botao = document.querySelector("#botao"); // cria a váriavel em JS usando como base o ID "botão" no HTML
+botao.addEventListener("click", consultaCep); // aguarda o acionamento do botão para poder executar a função criada acima

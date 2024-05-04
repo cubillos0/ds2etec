@@ -16,7 +16,7 @@
 <body>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Meu APP</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -40,7 +40,7 @@
     </div>
   </nav>
   <br><br>
-
+  <!-- 
   <div class="row">
     <div class="col-sm-12">
       <label>CEP</label>
@@ -54,7 +54,7 @@
 
     <div class="row">
       <label>Bairro</label>
-      <input type="text" id="bairro" readonly>
+      <input type="text" id="bairroo" readonly>
     </div>
 
     <div class="row">
@@ -82,40 +82,97 @@
     </div>
   </div>
   <br>
-  <br>
+  <br> -->
   <div>
-    <label>Nome</label>
-    <input name="nome" id="nome" /><br/><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Nome</label>
+        <input id="nome" type="text" /><br /><br>
+      </div>
+    </div>
 
-    <label>Documento</label>
-    <input name="documento" type="number" id="documento" /><br/><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Documento</label>
+        <input id="documento" type="text" /><br /><br>
+      </div>
+    </div>
 
-    <label>Numero</label>
-    <input name="numero" id="numero" /><br/><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Celular</label>
+        <input id="celular" type="text" /><br /><br>
+      </div>
+    </div>
 
-    <label>CEP</label>
-    <input name="cep" id="cep" /><br/><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>CEP</label>
+        <input id="cep" type="text" /><br /><br>
+      </div>
+    </div>
 
-    <label>Endereço</label>
-    <input name="endereco" id="endereco" /><br/><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Endereço</label>
+        <input id="endereco" type="text" /><br /><br>
+      </div>
+    </div>
 
-    <label>Bairro</label>
-    <input name="bairro" id="bairro" /><br/><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Número</label>
+        <input id="numero" type="text" /><br /><br>
+      </div>
+    </div>
 
-    <label>Cidade</label>
-    <input name="cidade" id="cidade" /><br/><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Bairro</label>
+        <input id="bairro" type="text" /><br /><br>
+      </div>
+    </div>
 
-    <label>Estado</label>
-    <input name="estado" id="estado" /><br/><br>
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Cidade</label>
+        <input id="cidade" type="text" /><br /><br>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+        <label>Estado</label>
+        <input id="estado" type="text" /><br /><br>
+      </div>
+    </div>
 
     <button class="btn btn-primary" onclick="enviar()">
-        Salvar dados
+      Salvar dados
     </button>
+
+    <button class="btn btn-secondary" onclick="lerclientes()">
+      Listar dados
+    </button>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Celular</th>
+        </tr>
+      </thead>
+
+      <tbody id="corpotabela">
+        
+      </tbody>
+    </table>
 
   </div>
 
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/cadastro_cliente.js"></script>
+  <script src="js/lerclientes.js"></script>
   <script src="js/index.js"></script>
 </body>
 
