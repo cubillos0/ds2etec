@@ -27,4 +27,4 @@ function consultaCep(){ //criando função para consultar API
 }
 
 let botao = document.querySelector("#botao"); // cria a váriavel em JS usando como base o ID "botão" no HTML
-botao.addEventListener("click", consultaCep); // aguarda o acionamento do botão para poder executar a função criada acima
+// botao.addEventListener("click", consultaCep); // aguarda o acionamento do botão para poder executar a função criada acima
