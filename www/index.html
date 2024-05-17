@@ -3,13 +3,12 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
-  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light dark">
-
   <link rel="stylesheet" href="css/estilo.css">
   <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
   <title>Consulta CEP</title>
 </head>
 
@@ -40,140 +39,144 @@
     </div>
   </nav>
   <br><br>
-  <!-- 
-  <div class="row">
-    <div class="col-sm-12">
-      <label>CEP</label>
-      <input type="text" id="cep" />
+
+  <!-- Primeira página onde exibe apenas as opções para ir ou para a tela de cadastro ou a de listagem -->
+
+  <div data-role="page" id="page1">
+    <div data-role="header">
+      <h1>Escolha uma opção</h1>
     </div>
 
-    <div class="row">
-      <label>Endereço</label>
-      <input type="text" id="logradouro" readonly>
-    </div>
-
-    <div class="row">
-      <label>Bairro</label>
-      <input type="text" id="bairroo" readonly>
-    </div>
-
-    <div class="row">
-      <label>Complemento</label>
-      <input type="text" id="complemento" readonly>
-    </div>
-
-    <div class="row">
-      <label>Cidade</label>
-      <input type="text" id="localidade" readonly>
-    </div>
-
-
-    <div class="row">
-      <label>UF</label>
-      <input type="text" id="uf" readonly>
-    </div>
-
-
-    <div class="row">
-      <div class="col-sm-12">
-        <button class="btn btn-primary" id="botao">
-          Consultar</button>
+    <div role="main" class="ui-content">
+      <!-- Botões para acessar as páginas de cadastro e listagem -->
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <!-- Botão para página de cadastro -->
+            <a href="#page2" class="btn btn-primary btn-lg btn-block">Cadastro</a>
+          </div>
+          <div class="col-sm-6">
+            <!-- Botão para página de listagem -->
+            <a href="#page3" class="btn btn-secondary btn-lg btn-block">Listagem</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <br>
-  <br> -->
-  <div>
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Nome</label>
-        <input id="nome" type="text" /><br /><br>
+
+
+
+
+  <div data-role="page" id="page2">
+    <div data-role="header">
+      <h1>Cadastro</h1>
+
+    <div role="main" class="ui-content">
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Nome</label>
+          <input id="nome" type="text" /><br /><br>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Documento</label>
-        <input id="documento" type="text" /><br /><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Documento</label>
+          <input id="documento" type="text" /><br /><br>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Celular</label>
-        <input id="celular" type="text" /><br /><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Celular</label>
+          <input id="celular" type="text" /><br /><br>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <label>CEP</label>
-        <input id="cep" type="text" /><br /><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <label>CEP</label>
+          <input id="cep" type="text" /><br /><br>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Endereço</label>
-        <input id="endereco" type="text" /><br /><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Endereço</label>
+          <input id="endereco" type="text" /><br /><br>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Número</label>
-        <input id="numero" type="text" /><br /><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Número</label>
+          <input id="numero" type="text" /><br /><br>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Bairro</label>
-        <input id="bairro" type="text" /><br /><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Bairro</label>
+          <input id="bairro" type="text" /><br /><br>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Cidade</label>
-        <input id="cidade" type="text" /><br /><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Cidade</label>
+          <input id="cidade" type="text" /><br /><br>
+        </div>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col-sm-12">
-        <label>Estado</label>
-        <input id="estado" type="text" /><br /><br>
+      <div class="row">
+        <div class="col-sm-12">
+          <label>Estado</label>
+          <input id="estado" type="text" /><br /><br>
+        </div>
       </div>
+
+      <button class="btn btn-primary" onclick="enviar()">
+        Salvar dados
+      </button>
+      <a href="#page2" class="ui-btn">Ir para a página 2</a>
     </div>
-
-    <button class="btn btn-primary" onclick="enviar()">
-      Salvar dados
-    </button>
-
-    <button class="btn btn-secondary" onclick="lerclientes()">
-      Listar dados
-    </button>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Nome</th>
-          <th>Celular</th>
-        </tr>
-      </thead>
-
-      <tbody id="corpotabela">
-        
-      </tbody>
-    </table>
-
   </div>
 
-  <button class="btn btn-danger" onclick="salvarLocal('Nome', 'Cleitin')">Cadastrar no localstorage</button>
-  <br><br>
-  <button class="btn btn-warning" onclick="lerLocal()">Ler o Storage</button>
+  <div data-role="page" id="page3">
+    <div data-role="header">
+      <h1>Página 3</h1>
+    </div>
 
+    <div role="main" class="ui-content">
+      <button class="btn btn-secondary" onclick="lerclientes()">
+        Listar dados
+      </button>
+
+      <div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Celular</th>
+            </tr>
+          </thead>
+  
+          <tbody id="corpotabela">
+  
+          </tbody>
+        </table>
+      </div>
+      
+      <button class="btn btn-danger" onclick="salvarLocal('Nome', 'Cleitin')">Cadastrar no localstorage</button>
+      <br><br>
+      <button class="btn btn-warning" onclick="lerLocal()">Ler o Storage</button>
+
+      <a href="#page1" class="ui-btn">Voltar para a tela inicial</a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <script src="js/bootstrap.bundle.js"></script>
   <script src="js/cadastro_cliente.js"></script>
   <script src="js/lerclientes.js"></script>
